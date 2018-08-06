@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  drone-server:
+    image: drone/drone:0.8
+
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/lib/drone:/var/lib/drone/
+    restart: always
+    environment:
+     - DRONE_OPEN=true
+     - DRONE_HOST=http://192.168.0.138.xip.io
+     - DRONE_GITLAB=true
+     - DRONE_GITLAB_CLIENT=f08f3azdgfdfgb47c8c334
+     - DRONE_GITLAB_SECRET=8ce57daba22ec3cdzgdsgbvd80ed8967d26bdfb 
+     - DRONE_GITLAB_URL=https://example.vivasa.in
+     - DRONE_SECRET=fxdgbcSjfcg3jmnyfgjxz4Udfh
+
+  drone-agent:
+    image: drone/agent:0.8
+
+    restart: always
+    depends_on:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DRONE_SERVER=drone-server:9000
+      - DRONE_SECRET=fxdgbcSjfcg3jmnyfgjxz4Udfh

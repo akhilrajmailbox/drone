@@ -1,0 +1,12 @@
+# Installation and configuration
+
+docs.drone.io/installation/
+
+# reference 
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-drone-on-ubuntu-16-04
+https://linoxide.com/linux-how-to/setup-drone-continuous-integration-linux/
+
+
+# GitLab Authentication for drone
+https://docs.gitlab.com/ee/integration/oauth_provider.html
+
