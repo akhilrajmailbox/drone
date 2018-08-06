@@ -16,7 +16,7 @@ services:
      - DRONE_GITLAB=true
      - DRONE_GITLAB_CLIENT=f08f3azdgfdfgb47c8c334
      - DRONE_GITLAB_SECRET=8ce57daba22ec3cdzgdsgbvd80ed8967d26bdfb 
-     - DRONE_GITLAB_URL=https://example.vivasa.in
+     - DRONE_GITLAB_URL=https://example.drone.com
      - DRONE_SECRET=fxdgbcSjfcg3jmnyfgjxz4Udfh
 
   drone-agent:
